@@ -70,11 +70,11 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_kcVbcK0uEea34NqhkWsDAA" name="x-ray mode target_1" type="_8a1G0K0sEea34NqhkWsDAA" aggregation="composite" association="_kcU0YK0uEea34NqhkWsDAA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_SxfU4a0vEea34NqhkWsDAA" name="flattener_1" type="_6EL_kK0sEea34NqhkWsDAA" aggregation="composite" association="_Sxet0K0vEea34NqhkWsDAA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_To1Mk60vEea34NqhkWsDAA" name="plunger_1" type="_-3qVoK0sEea34NqhkWsDAA" aggregation="composite" association="_To1MkK0vEea34NqhkWsDAA"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_ZaueILEeEeaPpeqtSkTEcQ" name="turntable_position_query" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_mrAocLEeEeaPpeqtSkTEcQ" name="turntable_position_result" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_4XXDcLHkEeahfuYT2kQbow" name="emitter_high_energy_beam" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_-7bNYLHkEeahfuYT2kQbow" name="emitter_low_energy_beam" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_E0ItMLHlEeahfuYT2kQbow" name="emitter_very_low_energy_light" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_ZaueILEeEeaPpeqtSkTEcQ" name="turntable_position_query" visibility="public" type="_ryiWsLJBEeahfuYT2kQbow" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_mrAocLEeEeaPpeqtSkTEcQ" name="turntable_position_result" type="_BpO9MLJCEeahfuYT2kQbow" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_4XXDcLHkEeahfuYT2kQbow" name="emitter_high_energy_beam" type="_IxWPYLJCEeahfuYT2kQbow" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_-7bNYLHkEeahfuYT2kQbow" name="emitter_low_energy_beam" type="_W90VILJCEeahfuYT2kQbow" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_E0ItMLHlEeahfuYT2kQbow" name="emitter_very_low_energy_light" visibility="package" type="_cvbHYLJCEeahfuYT2kQbow" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_96nS0LHzEeahfuYT2kQbow" name="turntable microswitch assembly_1" type="_vlAq8K0sEea34NqhkWsDAA" aggregation="composite" association="_96kPgLHzEeahfuYT2kQbow"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_G-FFgLJDEeahfuYT2kQbow" name="rec_emitter_high_energy_beam" signal="_IxWPYLJCEeahfuYT2kQbow"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_RmeAgLJDEeahfuYT2kQbow" name="rec_emitter_low_energy_beam" signal="_W90VILJCEeahfuYT2kQbow"/>
@@ -107,10 +107,10 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_g_hLwK0tEea34NqhkWsDAA" name="Electron Mode button"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_kM_NUK0tEea34NqhkWsDAA" name="Display">
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_uCRbYK8lEeaPpeqtSkTEcQ" name="therac25_turntable_position_display" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_BfEdYK9JEeaPpeqtSkTEcQ" name="display_time_in" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_uKXBYLGLEeaCK4hL_Y_D7g" name="selected_emitter_mode" aggregation="composite"/>
-        <ownedReception xmi:type="uml:Reception" xmi:id="_40QWMLTWEeaBS_VRvj6cKg" name="rec_turntable_position_display" signal="_ryiWsLJBEeahfuYT2kQbow"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_uCRbYK8lEeaPpeqtSkTEcQ" name="therac25_turntable_position_display" visibility="public" type="_BpO9MLJCEeahfuYT2kQbow" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_BfEdYK9JEeaPpeqtSkTEcQ" name="display_time_in" type="_lXDI4LTREeah9bFaQnvmhQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_uKXBYLGLEeaCK4hL_Y_D7g" name="selected_emitter_mode" visibility="package" type="_qDNgkLTSEeah9bFaQnvmhQ" aggregation="composite"/>
+        <ownedReception xmi:type="uml:Reception" xmi:id="_40QWMLTWEeaBS_VRvj6cKg" name="rec_turntable_position_display" signal="_BpO9MLJCEeahfuYT2kQbow"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="__5mBMLTWEeaBS_VRvj6cKg" name="rec_display_time" signal="_lXDI4LTREeah9bFaQnvmhQ"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_DBoJILTXEeaBS_VRvj6cKg" name="rec_selected_operation_mode" signal="_MpbjILTSEeah9bFaQnvmhQ"/>
       </packagedElement>
@@ -160,24 +160,25 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_To1zoK0vEea34NqhkWsDAA" name="therac 25_1" type="_i4zeEK0sEea34NqhkWsDAA" association="_To1MkK0vEea34NqhkWsDAA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Cty84K0xEea34NqhkWsDAA" name="Turntable Motor" visibility="public">
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_VxLnsLHmEeahfuYT2kQbow" name="rotate_turntable" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_VxLnsLHmEeahfuYT2kQbow" name="rotate_turntable" type="_hDFj4LTSEeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_Z5_oALTXEeaBS_VRvj6cKg" name="rec_rotate_turntable" signal="_hDFj4LTSEeah9bFaQnvmhQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_GpCVwK8mEeaPpeqtSkTEcQ" name="Timer">
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_aI7c8K8mEeaPpeqtSkTEcQ" name="increment_timer_in" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_BDizQK8uEeaPpeqtSkTEcQ" name="emitter_start" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_61CNIK8uEeaPpeqtSkTEcQ" name="stop_timer" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_0B5GkK9IEeaPpeqtSkTEcQ" name="display_time_out" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_S7P2ULVdEeaBS_VRvj6cKg" name="emitter_stop" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_aI7c8K8mEeaPpeqtSkTEcQ" name="increment_timer_in" visibility="public" type="_VEx-0LTSEeah9bFaQnvmhQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_BDizQK8uEeaPpeqtSkTEcQ" name="emitter_start" visibility="package" type="_fp8cILTREeah9bFaQnvmhQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_61CNIK8uEeaPpeqtSkTEcQ" name="stop_timer" type="_Z5cnsLTSEeah9bFaQnvmhQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_0B5GkK9IEeaPpeqtSkTEcQ" name="display_time_out" type="_lXDI4LTREeah9bFaQnvmhQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_S7P2ULVdEeaBS_VRvj6cKg" name="emitter_stop" type="_ZYiC0LVdEeaBS_VRvj6cKg" aggregation="composite"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_e3aHwLTYEeaBS_VRvj6cKg" name="rec_time_increment" signal="_VEx-0LTSEeah9bFaQnvmhQ"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_nLZXMLTYEeaBS_VRvj6cKg" name="rec_time_stop" signal="_Z5cnsLTSEeah9bFaQnvmhQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_SfcpcK8uEeaPpeqtSkTEcQ" name="Emitter">
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_Mi1u0K8zEeaPpeqtSkTEcQ" name="emitter_start_stop" visibility="private" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_ziThALGMEeaCK4hL_Y_D7g" name="emitter_operation_mode" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_rOyVkLHiEeahfuYT2kQbow" name="low_energy_beam" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_5bcokLHiEeahfuYT2kQbow" name="high_energy_beam" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_AIZowLHjEeahfuYT2kQbow" name="very_low_energy_light" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Mi1u0K8zEeaPpeqtSkTEcQ" name="emitter_stop" visibility="package" type="_ZYiC0LVdEeaBS_VRvj6cKg" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_ziThALGMEeaCK4hL_Y_D7g" name="emitter_operation_mode" type="_qDNgkLTSEeah9bFaQnvmhQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_rOyVkLHiEeahfuYT2kQbow" name="low_energy_beam" type="_W90VILJCEeahfuYT2kQbow" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_5bcokLHiEeahfuYT2kQbow" name="high_energy_beam" type="_IxWPYLJCEeahfuYT2kQbow" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_AIZowLHjEeahfuYT2kQbow" name="very_low_energy_light" visibility="public" type="_cvbHYLJCEeahfuYT2kQbow" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_TWQagLVhEeaBS_VRvj6cKg" name="emitter_start" type="_fp8cILTREeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_tPUogLTYEeaBS_VRvj6cKg" name="rec_emitter_start" signal="_fp8cILTREeah9bFaQnvmhQ"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_6KFOwLTYEeaBS_VRvj6cKg" name="rec_emitter_operation_mode" signal="_qDNgkLTSEeah9bFaQnvmhQ"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_3c2LALVdEeaBS_VRvj6cKg" name="rec_emitter_stop" signal="_ZYiC0LVdEeaBS_VRvj6cKg"/>
@@ -465,4 +466,5 @@
   <PortAndFlows:FlowPort xmi:id="_NlpQALHuEeahfuYT2kQbow" base_Port="_Nloo8LHuEeahfuYT2kQbow" direction="out"/>
   <Blocks:Unit xmi:id="_kjAN4LJBEeahfuYT2kQbow" base_InstanceSpecification="_kiyygLJBEeahfuYT2kQbow"/>
   <PortAndFlows:FlowPort xmi:id="_S7ZAQLVdEeaBS_VRvj6cKg" base_Port="_S7P2ULVdEeaBS_VRvj6cKg" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_TWSPsLVhEeaBS_VRvj6cKg" base_Port="_TWQagLVhEeaBS_VRvj6cKg" direction="in"/>
 </xmi:XMI>

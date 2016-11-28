@@ -3351,6 +3351,11 @@
           <element xmi:type="uml:Port" href="therac25.uml#_AIZowLHjEeahfuYT2kQbow"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_dpwN0rHjEeahfuYT2kQbow"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_TWqDILVhEeaBS_VRvj6cKg" type="shape_sysml_flowport_as_label">
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_TWqDIbVhEeaBS_VRvj6cKg"/>
+          <element xmi:type="uml:Port" href="therac25.uml#_TWQagLVhEeaBS_VRvj6cKg"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_TWqDIrVhEeaBS_VRvj6cKg"/>
+        </children>
         <styles xmi:type="notation:DrawerStyle" xmi:id="_XhuexbEqEeaPpeqtSkTEcQ"/>
         <styles xmi:type="notation:TitleStyle" xmi:id="_XhuexrEqEeaPpeqtSkTEcQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Xhuex7EqEeaPpeqtSkTEcQ"/>
