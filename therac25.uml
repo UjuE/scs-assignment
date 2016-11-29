@@ -31,7 +31,7 @@
           <node xmi:type="uml:InitialNode" xmi:id="_6RNMEK0lEea34NqhkWsDAA" name="InitialNode1" outgoing="_Eme90K0mEea34NqhkWsDAA"/>
         </ownedBehavior>
       </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_hj-sEK0fEea34NqhkWsDAA" name="Treat Cancer"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_hj-sEK0fEea34NqhkWsDAA" name="Treat Cancer" subject="_g7wfgLVkEeaBS_VRvj6cKg"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_tbu9MK0fEea34NqhkWsDAA" name="An_Operator_Take_X-ray" memberEnd="_tbyAgK0fEea34NqhkWsDAA _tbyAga0fEea34NqhkWsDAA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tbwLUK0fEea34NqhkWsDAA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tbwyYK0fEea34NqhkWsDAA" key="nature" value="UML_Nature"/>
@@ -46,7 +46,7 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_uhqDcq0fEea34NqhkWsDAA" name="treat cancer" type="_hj-sEK0fEea34NqhkWsDAA" association="_uhpcYK0fEea34NqhkWsDAA"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_uhqqgK0fEea34NqhkWsDAA" name="operator" type="_ZKkxIK0fEea34NqhkWsDAA" association="_uhpcYK0fEea34NqhkWsDAA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_O3bQ4K0gEea34NqhkWsDAA" name="Align Turntable"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_O3bQ4K0gEea34NqhkWsDAA" name="Align Turntable" subject="_g7wfgLVkEeaBS_VRvj6cKg"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_S1WfAK0gEea34NqhkWsDAA" name="An_Operator_Align_Turn_Table" memberEnd="_S1XtIK0gEea34NqhkWsDAA _S1XtIa0gEea34NqhkWsDAA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S1XGEK0gEea34NqhkWsDAA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S1XGEa0gEea34NqhkWsDAA" key="nature" value="UML_Nature"/>
@@ -62,7 +62,7 @@
 	2. XRayEmmitterMode
 	3. AlignmentEmitterMode</body>
       </ownedComment>
-      <packagedElement xmi:type="uml:Class" xmi:id="_i4zeEK0sEea34NqhkWsDAA" name="Therac_25_Turntable">
+      <packagedElement xmi:type="uml:Class" xmi:id="_i4zeEK0sEea34NqhkWsDAA" name="Therac_25_Turntable" isActive="true">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_iEah0q0uEea34NqhkWsDAA" name="counterweight_1" type="_y_1zEK0sEea34NqhkWsDAA" aggregation="composite" association="_iEZ6wK0uEea34NqhkWsDAA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_itX_Qq0uEea34NqhkWsDAA" name="microswitch actuators_1" type="_0KDjcK0sEea34NqhkWsDAA" aggregation="composite" association="_itXYMK0uEea34NqhkWsDAA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_jS_0060uEea34NqhkWsDAA" name="electron mode scan magnet_1" type="_3MVosK0sEea34NqhkWsDAA" aggregation="composite" association="_jS_00K0uEea34NqhkWsDAA"/>
@@ -76,6 +76,7 @@
         <ownedAttribute xmi:type="uml:Port" xmi:id="_-7bNYLHkEeahfuYT2kQbow" name="emitter_low_energy_beam" type="_W90VILJCEeahfuYT2kQbow" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_E0ItMLHlEeahfuYT2kQbow" name="emitter_very_low_energy_light" visibility="package" type="_cvbHYLJCEeahfuYT2kQbow" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_96nS0LHzEeahfuYT2kQbow" name="turntable microswitch assembly_1" type="_vlAq8K0sEea34NqhkWsDAA" aggregation="composite" association="_96kPgLHzEeahfuYT2kQbow"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_OGaMULVzEeaBS_VRvj6cKg" name="operation_rotate_turntable"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_G-FFgLJDEeahfuYT2kQbow" name="rec_emitter_high_energy_beam" signal="_IxWPYLJCEeahfuYT2kQbow"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_RmeAgLJDEeahfuYT2kQbow" name="rec_emitter_low_energy_beam" signal="_W90VILJCEeahfuYT2kQbow"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_YXYToLJDEeahfuYT2kQbow" name="rec_very_low_energy_light" signal="_cvbHYLJCEeahfuYT2kQbow"/>
@@ -106,7 +107,7 @@
         <ownedAttribute xmi:type="uml:Port" xmi:id="_oyDPALGCEeacHfKEnsXq-Q" name="selected_emitter_mode" aggregation="composite"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_g_hLwK0tEea34NqhkWsDAA" name="Electron Mode button"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_kM_NUK0tEea34NqhkWsDAA" name="Display">
+      <packagedElement xmi:type="uml:Class" xmi:id="_kM_NUK0tEea34NqhkWsDAA" name="Display" visibility="public" isActive="true">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_uCRbYK8lEeaPpeqtSkTEcQ" name="therac25_turntable_position_display" visibility="public" type="_BpO9MLJCEeahfuYT2kQbow" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_BfEdYK9JEeaPpeqtSkTEcQ" name="display_time_in" type="_lXDI4LTREeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_uKXBYLGLEeaCK4hL_Y_D7g" name="selected_emitter_mode" visibility="package" type="_qDNgkLTSEeah9bFaQnvmhQ" aggregation="composite"/>
@@ -159,20 +160,21 @@
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_To1zoK0vEea34NqhkWsDAA" name="therac 25_1" type="_i4zeEK0sEea34NqhkWsDAA" association="_To1MkK0vEea34NqhkWsDAA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Cty84K0xEea34NqhkWsDAA" name="Turntable Motor" visibility="public">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Cty84K0xEea34NqhkWsDAA" name="Turntable Motor" visibility="public" isActive="true">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_VxLnsLHmEeahfuYT2kQbow" name="rotate_turntable" type="_hDFj4LTSEeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_Z5_oALTXEeaBS_VRvj6cKg" name="rec_rotate_turntable" signal="_hDFj4LTSEeah9bFaQnvmhQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_GpCVwK8mEeaPpeqtSkTEcQ" name="Timer">
+      <packagedElement xmi:type="uml:Class" xmi:id="_GpCVwK8mEeaPpeqtSkTEcQ" name="Timer" isActive="true">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_aI7c8K8mEeaPpeqtSkTEcQ" name="increment_timer_in" visibility="public" type="_VEx-0LTSEeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_BDizQK8uEeaPpeqtSkTEcQ" name="emitter_start" visibility="package" type="_fp8cILTREeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_61CNIK8uEeaPpeqtSkTEcQ" name="stop_timer" type="_Z5cnsLTSEeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_0B5GkK9IEeaPpeqtSkTEcQ" name="display_time_out" type="_lXDI4LTREeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_S7P2ULVdEeaBS_VRvj6cKg" name="emitter_stop" type="_ZYiC0LVdEeaBS_VRvj6cKg" aggregation="composite"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_OnE1gLXYEeaBS_VRvj6cKg" name="operation_decrement_timer"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_e3aHwLTYEeaBS_VRvj6cKg" name="rec_time_increment" signal="_VEx-0LTSEeah9bFaQnvmhQ"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_nLZXMLTYEeaBS_VRvj6cKg" name="rec_time_stop" signal="_Z5cnsLTSEeah9bFaQnvmhQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_SfcpcK8uEeaPpeqtSkTEcQ" name="Emitter">
+      <packagedElement xmi:type="uml:Class" xmi:id="_SfcpcK8uEeaPpeqtSkTEcQ" name="Emitter" isActive="true">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_Mi1u0K8zEeaPpeqtSkTEcQ" name="emitter_stop" visibility="package" type="_ZYiC0LVdEeaBS_VRvj6cKg" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_ziThALGMEeaCK4hL_Y_D7g" name="emitter_operation_mode" type="_qDNgkLTSEeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_rOyVkLHiEeahfuYT2kQbow" name="low_energy_beam" type="_W90VILJCEeahfuYT2kQbow" aggregation="composite"/>
@@ -183,7 +185,7 @@
         <ownedReception xmi:type="uml:Reception" xmi:id="_6KFOwLTYEeaBS_VRvj6cKg" name="rec_emitter_operation_mode" signal="_qDNgkLTSEeah9bFaQnvmhQ"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_3c2LALVdEeaBS_VRvj6cKg" name="rec_emitter_stop" signal="_ZYiC0LVdEeaBS_VRvj6cKg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_6jIgMK-vEeaPpeqtSkTEcQ" name="Therac 25 Controller">
+      <packagedElement xmi:type="uml:Class" xmi:id="_6jIgMK-vEeaPpeqtSkTEcQ" name="Therac 25 Controller" isActive="true">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_t4M9ArEgEeaPpeqtSkTEcQ" name="start button_1" type="_D9_9UK0tEea34NqhkWsDAA" aggregation="composite" association="_t4Lu4LEgEeaPpeqtSkTEcQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_unazcrEgEeaPpeqtSkTEcQ" name="stop button_1" type="_SX2XwK0tEea34NqhkWsDAA" aggregation="composite" association="_unaMYLEgEeaPpeqtSkTEcQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_vLr-IbEgEeaPpeqtSkTEcQ" name="mode selector_1" type="_bjKQwK0tEea34NqhkWsDAA" aggregation="composite" association="_vLrXELEgEeaPpeqtSkTEcQ"/>
@@ -341,6 +343,55 @@
       <packagedElement xmi:type="uml:Signal" xmi:id="_hDFj4LTSEeah9bFaQnvmhQ" name="sig_rotate_turntable"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_qDNgkLTSEeah9bFaQnvmhQ" name="sig_emitter_operation_mode"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_ZYiC0LVdEeaBS_VRvj6cKg" name="sig_emitter_stop"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_vvZIYLVjEeaBS_VRvj6cKg" name="Dynamics">
+      <packagedElement xmi:type="uml:Interaction" xmi:id="_g7wfgLVkEeaBS_VRvj6cKg" name="normal_operation" useCase="_hj-sEK0fEea34NqhkWsDAA _O3bQ4K0gEea34NqhkWsDAA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_OVpcYLXaEeaBS_VRvj6cKg">
+          <body> </body>
+        </ownedComment>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_xJ4IYLVuEeaBS_VRvj6cKg" name="Emitter" represents="_cl4foLErEeaPpeqtSkTEcQ" coveredBy="_fplPgLVwEeaBS_VRvj6cKg _J55agLVxEeaBS_VRvj6cKg _jV3_0LXYEeaBS_VRvj6cKg"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_8R6z0LVuEeaBS_VRvj6cKg" name="Timer" represents="_BJepsLF_EeacHfKEnsXq-Q" coveredBy="_JYhBMLVwEeaBS_VRvj6cKg _CrWJILVxEeaBS_VRvj6cKg _J54MYLVxEeaBS_VRvj6cKg _TFWdcLVxEeaBS_VRvj6cKg _OoH-YLXYEeaBS_VRvj6cKg _OoJMgLXYEeaBS_VRvj6cKg _W6oAELXYEeaBS_VRvj6cKg _W6onILXYEeaBS_VRvj6cKg _jV3YwLXYEeaBS_VRvj6cKg"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_Gu-BgLVvEeaBS_VRvj6cKg" name="Controller" represents="_SSQA4q-wEeaPpeqtSkTEcQ" coveredBy="_JYgaILVwEeaBS_VRvj6cKg _fpkocLVwEeaBS_VRvj6cKg _r5KKwLVwEeaBS_VRvj6cKg _1f7QsLVwEeaBS_VRvj6cKg _CrViELVxEeaBS_VRvj6cKg"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_VWo1gLVvEeaBS_VRvj6cKg" name="turntable" represents="_TJnGsq-wEeaPpeqtSkTEcQ" coveredBy="_1f73wLVwEeaBS_VRvj6cKg _4kZuULVwEeaBS_VRvj6cKg _OHXOkLVzEeaBS_VRvj6cKg"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_aZ6iILVvEeaBS_VRvj6cKg" name="turntable_motor" represents="_ghTzYrErEeaPpeqtSkTEcQ" coveredBy="_r5Kx0LVwEeaBS_VRvj6cKg _OHWngLVzEeaBS_VRvj6cKg"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_kBL-YLVvEeaBS_VRvj6cKg" name="display" represents="_XCmdQbErEeaPpeqtSkTEcQ" coveredBy="_4kaVYLVwEeaBS_VRvj6cKg _TFXEgLVxEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OoH-YLXYEeaBS_VRvj6cKg" name="operation_decrement_timer_MessageSend" covered="_8R6z0LVuEeaBS_VRvj6cKg" message="_OoHXULXYEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fpkocLVwEeaBS_VRvj6cKg" name="sig_emitter_operation_mode_MessageSend" covered="_Gu-BgLVvEeaBS_VRvj6cKg" message="_fpjaULVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fplPgLVwEeaBS_VRvj6cKg" name="sig_emitter_operation_mode_MessageRecv" covered="_xJ4IYLVuEeaBS_VRvj6cKg" message="_fpjaULVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r5KKwLVwEeaBS_VRvj6cKg" name="sig_rotate_turntable_MessageSend" covered="_Gu-BgLVvEeaBS_VRvj6cKg" message="_r5I8oLVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r5Kx0LVwEeaBS_VRvj6cKg" name="sig_rotate_turntable_MessageRecv" covered="_aZ6iILVvEeaBS_VRvj6cKg" message="_r5I8oLVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OHWngLVzEeaBS_VRvj6cKg" name="rotate_turntable_MessageSend" covered="_aZ6iILVvEeaBS_VRvj6cKg" message="_OHVZYLVzEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OHXOkLVzEeaBS_VRvj6cKg" name="rotate_turntable_MessageRecv" covered="_VWo1gLVvEeaBS_VRvj6cKg" message="_OHVZYLVzEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1f7QsLVwEeaBS_VRvj6cKg" name="sig_turntable_position_query_MessageSend" covered="_Gu-BgLVvEeaBS_VRvj6cKg" message="_1f6poLVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1f73wLVwEeaBS_VRvj6cKg" name="sig_turntable_position_query_MessageRecv" covered="_VWo1gLVvEeaBS_VRvj6cKg" message="_1f6poLVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_jV3_0LXYEeaBS_VRvj6cKg" name="sig_emitter_stop_MessageRecv" covered="_xJ4IYLVuEeaBS_VRvj6cKg" message="_jV2KoLXYEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4kZuULVwEeaBS_VRvj6cKg" name="sig_turntable_position_result_MessageSend" covered="_VWo1gLVvEeaBS_VRvj6cKg" message="_4kZHQLVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4kaVYLVwEeaBS_VRvj6cKg" name="sig_turntable_position_result_MessageRecv" covered="_kBL-YLVvEeaBS_VRvj6cKg" message="_4kZHQLVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CrViELVxEeaBS_VRvj6cKg" name="sig_increment_timer_Message0Send" covered="_Gu-BgLVvEeaBS_VRvj6cKg" message="_CrTs4LVxEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CrWJILVxEeaBS_VRvj6cKg" name="sig_increment_timer_Message0Recv" covered="_8R6z0LVuEeaBS_VRvj6cKg" message="_CrTs4LVxEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J55agLVxEeaBS_VRvj6cKg" name="sig_emitter_high_energy_MessageRecv" covered="_xJ4IYLVuEeaBS_VRvj6cKg" message="_J53lULVxEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TFWdcLVxEeaBS_VRvj6cKg" name="sig_dispaly_time_MessageSend" covered="_8R6z0LVuEeaBS_VRvj6cKg" message="_TFVPULVxEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TFXEgLVxEeaBS_VRvj6cKg" name="sig_dispaly_time_MessageRecv" covered="_kBL-YLVvEeaBS_VRvj6cKg" message="_TFVPULVxEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_W6onILXYEeaBS_VRvj6cKg" name="operation_decrement_timer_Message0Recv" covered="_8R6z0LVuEeaBS_VRvj6cKg" message="_W6nZALXYEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OoJMgLXYEeaBS_VRvj6cKg" name="operation_decrement_timer_MessageRecv" covered="_8R6z0LVuEeaBS_VRvj6cKg" message="_OoHXULXYEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_W6oAELXYEeaBS_VRvj6cKg" name="operation_decrement_timer_Message0Send" covered="_8R6z0LVuEeaBS_VRvj6cKg" message="_W6nZALXYEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_jV3YwLXYEeaBS_VRvj6cKg" name="sig_emitter_stop_MessageSend" covered="_8R6z0LVuEeaBS_VRvj6cKg" message="_jV2KoLXYEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYhBMLVwEeaBS_VRvj6cKg" name="sig_increment_timer_MessageRecv" covered="_8R6z0LVuEeaBS_VRvj6cKg" message="_JYXQMLVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYgaILVwEeaBS_VRvj6cKg" name="sig_increment_timer_MessageSend" covered="_Gu-BgLVvEeaBS_VRvj6cKg" message="_JYXQMLVwEeaBS_VRvj6cKg"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J54MYLVxEeaBS_VRvj6cKg" name="sig_emitter_high_energy_MessageSend" covered="_8R6z0LVuEeaBS_VRvj6cKg" message="_J53lULVxEeaBS_VRvj6cKg"/>
+        <message xmi:type="uml:Message" xmi:id="_JYXQMLVwEeaBS_VRvj6cKg" name="sig_increment_timer_Message" messageSort="asynchSignal" receiveEvent="_JYhBMLVwEeaBS_VRvj6cKg" sendEvent="_JYgaILVwEeaBS_VRvj6cKg" signature="_VEx-0LTSEeah9bFaQnvmhQ"/>
+        <message xmi:type="uml:Message" xmi:id="_fpjaULVwEeaBS_VRvj6cKg" name="sig_emitter_operation_mode_Message" messageSort="asynchSignal" receiveEvent="_fplPgLVwEeaBS_VRvj6cKg" sendEvent="_fpkocLVwEeaBS_VRvj6cKg" signature="_qDNgkLTSEeah9bFaQnvmhQ"/>
+        <message xmi:type="uml:Message" xmi:id="_r5I8oLVwEeaBS_VRvj6cKg" name="sig_rotate_turntable_Message" messageSort="asynchSignal" receiveEvent="_r5Kx0LVwEeaBS_VRvj6cKg" sendEvent="_r5KKwLVwEeaBS_VRvj6cKg" signature="_hDFj4LTSEeah9bFaQnvmhQ"/>
+        <message xmi:type="uml:Message" xmi:id="_1f6poLVwEeaBS_VRvj6cKg" name="sig_turntable_position_query_Message" messageSort="asynchSignal" receiveEvent="_1f73wLVwEeaBS_VRvj6cKg" sendEvent="_1f7QsLVwEeaBS_VRvj6cKg" signature="_ryiWsLJBEeahfuYT2kQbow"/>
+        <message xmi:type="uml:Message" xmi:id="_4kZHQLVwEeaBS_VRvj6cKg" name="sig_turntable_position_result_Message" messageSort="asynchSignal" receiveEvent="_4kaVYLVwEeaBS_VRvj6cKg" sendEvent="_4kZuULVwEeaBS_VRvj6cKg" signature="_BpO9MLJCEeahfuYT2kQbow"/>
+        <message xmi:type="uml:Message" xmi:id="_CrTs4LVxEeaBS_VRvj6cKg" name="sig_increment_timer_Message0" messageSort="asynchSignal" receiveEvent="_CrWJILVxEeaBS_VRvj6cKg" sendEvent="_CrViELVxEeaBS_VRvj6cKg" signature="_VEx-0LTSEeah9bFaQnvmhQ"/>
+        <message xmi:type="uml:Message" xmi:id="_J53lULVxEeaBS_VRvj6cKg" name="sig_emitter_high_energy_Message" messageSort="asynchSignal" receiveEvent="_J55agLVxEeaBS_VRvj6cKg" sendEvent="_J54MYLVxEeaBS_VRvj6cKg" signature="_IxWPYLJCEeahfuYT2kQbow"/>
+        <message xmi:type="uml:Message" xmi:id="_TFVPULVxEeaBS_VRvj6cKg" name="sig_dispaly_time_Message" messageSort="asynchSignal" receiveEvent="_TFXEgLVxEeaBS_VRvj6cKg" sendEvent="_TFWdcLVxEeaBS_VRvj6cKg" signature="_lXDI4LTREeah9bFaQnvmhQ"/>
+        <message xmi:type="uml:Message" xmi:id="_OHVZYLVzEeaBS_VRvj6cKg" name="rotate_turntable_Message" receiveEvent="_OHXOkLVzEeaBS_VRvj6cKg" sendEvent="_OHWngLVzEeaBS_VRvj6cKg" signature="_OGaMULVzEeaBS_VRvj6cKg"/>
+        <message xmi:type="uml:Message" xmi:id="_OoHXULXYEeaBS_VRvj6cKg" name="operation_decrement_timer_Message" messageSort="asynchCall" receiveEvent="_OoJMgLXYEeaBS_VRvj6cKg" sendEvent="_OoH-YLXYEeaBS_VRvj6cKg" signature="_OnE1gLXYEeaBS_VRvj6cKg"/>
+        <message xmi:type="uml:Message" xmi:id="_W6nZALXYEeaBS_VRvj6cKg" name="operation_decrement_timer_Message" receiveEvent="_W6onILXYEeaBS_VRvj6cKg" sendEvent="_W6oAELXYEeaBS_VRvj6cKg" signature="_OnE1gLXYEeaBS_VRvj6cKg"/>
+        <message xmi:type="uml:Message" xmi:id="_jV2KoLXYEeaBS_VRvj6cKg" name="sig_emitter_stop_Message" messageSort="asynchSignal" receiveEvent="_jV3_0LXYEeaBS_VRvj6cKg" sendEvent="_jV3YwLXYEeaBS_VRvj6cKg" signature="_ZYiC0LVdEeaBS_VRvj6cKg"/>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__Il18K0eEea34NqhkWsDAA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__InEEK0eEea34NqhkWsDAA" source="http://www.eclipse.org/uml2/2.0.0/UML">
