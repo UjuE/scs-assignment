@@ -68,9 +68,25 @@
           <nestedClassifier xmi:type="uml:Class" xmi:id="_HAN7QLdsEeaUEPoVbCvQxA" name="Light Operation Mode"/>
         </nestedClassifier>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_fa1QALdsEeaUEPoVbCvQxA" name="Configurable Operation Mode">
+      <packagedElement xmi:type="uml:Class" xmi:id="_fa1QALdsEeaUEPoVbCvQxA" name="Configurable Active Operation Mode">
         <nestedClassifier xmi:type="uml:Class" xmi:id="_Z5sGMLdtEeaUEPoVbCvQxA" name="Operate in Electron Mode"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_Imy44LerEeaUEPoVbCvQxA" name="Operate in X-Ray mode" visibility="package"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_fXMukLerEeaUEPoVbCvQxA" name="Operate in Light Mode"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SuGOILetEeaUEPoVbCvQxA" client="_fa1QALdsEeaUEPoVbCvQxA" supplier="_SEbzcLdoEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lMCToLeuEeaUEPoVbCvQxA" name="Set Operation Mode User Interface">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_sVCaALfXEeaUEPoVbCvQxA" name="Set Electron Mode"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_T2LB8LfYEeaUEPoVbCvQxA" name="Set X-Ray Mode"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_AWVvsLfZEeaUEPoVbCvQxA" name="Set Light Mode"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_sr6lkLeuEeaUEPoVbCvQxA" client="_CO9xAK0fEea34NqhkWsDAA" supplier="_SEbzcLdoEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_jQtA0LfZEeaUEPoVbCvQxA" name="" client="_lMCToLeuEeaUEPoVbCvQxA" supplier="_SEbzcLdoEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_rDvfULfZEeaUEPoVbCvQxA" client="_AWVvsLfZEeaUEPoVbCvQxA" supplier="_CO9xAK0fEea34NqhkWsDAA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_u5wuoLfZEeaUEPoVbCvQxA" client="_T2LB8LfYEeaUEPoVbCvQxA" supplier="_PEhQQLdpEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_z_MXYLfZEeaUEPoVbCvQxA" client="_sVCaALfXEeaUEPoVbCvQxA" supplier="_u4TncLdoEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_C-JqALfaEeaUEPoVbCvQxA" client="_lMCToLeuEeaUEPoVbCvQxA" supplier="_SEbzcLdoEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_1-FQgLfaEeaUEPoVbCvQxA" name="Off User Interface"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_b_CpsLfcEeaUEPoVbCvQxA" client="_1-FQgLfaEeaUEPoVbCvQxA" supplier="_3uO7wLdnEeaUEPoVbCvQxA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_OMBF8K0sEea34NqhkWsDAA" name="Design_Model">
       <ownedComment xmi:type="uml:Comment" xmi:id="_ErQnALGCEeacHfKEnsXq-Q" annotatedElement="_WqQ_sLGBEeacHfKEnsXq-Q">
@@ -630,4 +646,13 @@
   <Requirements:Requirement xmi:id="_HA4CkLdsEeaUEPoVbCvQxA" text="The system shall have a Light operation mode" id="operation_1.2.3" base_Class="_HAN7QLdsEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_fbc7ELdsEeaUEPoVbCvQxA" text="The system shall respond to commands change mode of operation" id="operation_2" base_Class="_fa1QALdsEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_Z6ewYLdtEeaUEPoVbCvQxA" text="The system shall respond to commands that selects Electron Mode" id="operation_2.1" base_Class="_Z5sGMLdtEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_InmxMLerEeaUEPoVbCvQxA" text="The System shall respond to comands that selects X-ray mode" id="operation_2.2" base_Class="_Imy44LerEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_fX-KoLerEeaUEPoVbCvQxA" text="The system shall respond to commands that selects light mode" id="operation_2.3" base_Class="_fXMukLerEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_lMx6gLeuEeaUEPoVbCvQxA" text="The system shall have a user interface to set the operation mode" id="component_1" base_Class="_lMCToLeuEeaUEPoVbCvQxA"/>
+  <Requirements:DeriveReqt xmi:id="_stFqQLeuEeaUEPoVbCvQxA" base_Abstraction="_sr6lkLeuEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_sV9AALfXEeaUEPoVbCvQxA" text="The system shall have a 'set Electron Mode' user interface" id="component_1.1" base_Class="_sVCaALfXEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_T3LHgLfYEeaUEPoVbCvQxA" text="The system shall have a 'set X-Ray Mode' User Interface" id="component_1.2" base_Class="_T2LB8LfYEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_AXiCgLfZEeaUEPoVbCvQxA" text="The system shall have a 'Set light mode' user interface" id="component_1.3" base_Class="_AWVvsLfZEeaUEPoVbCvQxA"/>
+  <Requirements:DeriveReqt xmi:id="_jSJLQLfZEeaUEPoVbCvQxA" base_Abstraction="_jQtA0LfZEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_1_EvALfaEeaUEPoVbCvQxA" text="The system shall have an 'Off' user interface" id="component_2" base_Class="_1-FQgLfaEeaUEPoVbCvQxA"/>
 </xmi:XMI>
