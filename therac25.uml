@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements">
   <uml:Model xmi:id="__HqB0K0eEea34NqhkWsDAA" name="Therac25RootElement">
     <packagedElement xmi:type="uml:Package" xmi:id="_CO9xAK0fEea34NqhkWsDAA" name="RequirementsAnalysis">
       <packagedElement xmi:type="uml:Actor" xmi:id="_ZKkxIK0fEea34NqhkWsDAA" name="Operator"/>
@@ -61,7 +61,9 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_S1XtIa0gEea34NqhkWsDAA" name="operator" type="_ZKkxIK0fEea34NqhkWsDAA" association="_S1WfAK0gEea34NqhkWsDAA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_2CWeMLdmEeaUEPoVbCvQxA" name="Operation Modes">
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_3uO7wLdnEeaUEPoVbCvQxA" name="Off Operation Mode"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_3uO7wLdnEeaUEPoVbCvQxA" name="Off Operation Mode">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_aV_ZgLfiEeaUEPoVbCvQxA" name="Stop Operation"/>
+        </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_SEbzcLdoEeaUEPoVbCvQxA" name="Active Operation Modes">
           <nestedClassifier xmi:type="uml:Class" xmi:id="_u4TncLdoEeaUEPoVbCvQxA" name="Electron Operation Mode"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_PEhQQLdpEeaUEPoVbCvQxA" name="X-Ray Operation Mode"/>
@@ -87,6 +89,17 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_C-JqALfaEeaUEPoVbCvQxA" client="_lMCToLeuEeaUEPoVbCvQxA" supplier="_SEbzcLdoEeaUEPoVbCvQxA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_1-FQgLfaEeaUEPoVbCvQxA" name="Off User Interface"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_b_CpsLfcEeaUEPoVbCvQxA" client="_1-FQgLfaEeaUEPoVbCvQxA" supplier="_3uO7wLdnEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4uABILffEeaUEPoVbCvQxA" name="Start Operation">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_3CivcLfgEeaUEPoVbCvQxA" name="Emitting time"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_Ez6tQLfkEeaUEPoVbCvQxA" name="Emitter Component"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SSWlILfgEeaUEPoVbCvQxA" client="_4uABILffEeaUEPoVbCvQxA" supplier="_SEbzcLdoEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZBNp0LfgEeaUEPoVbCvQxA" name="Start User Interface"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_sva50LfgEeaUEPoVbCvQxA" client="_ZBNp0LfgEeaUEPoVbCvQxA" supplier="_4uABILffEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_V6c3wLfhEeaUEPoVbCvQxA" name="Timer Component"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_Yxay8LfjEeaUEPoVbCvQxA" name="" client="_V6c3wLfhEeaUEPoVbCvQxA" supplier="_3CivcLfgEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_6n2FYLfkEeaUEPoVbCvQxA" name="Turntable component"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_M5VfwLflEeaUEPoVbCvQxA" client="_2CWeMLdmEeaUEPoVbCvQxA" supplier="_6n2FYLfkEeaUEPoVbCvQxA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_OMBF8K0sEea34NqhkWsDAA" name="Design_Model">
       <ownedComment xmi:type="uml:Comment" xmi:id="_ErQnALGCEeacHfKEnsXq-Q" annotatedElement="_WqQ_sLGBEeacHfKEnsXq-Q">
@@ -632,17 +645,11 @@
   <Blocks:Unit xmi:id="_kjAN4LJBEeahfuYT2kQbow" base_InstanceSpecification="_kiyygLJBEeahfuYT2kQbow"/>
   <PortAndFlows:FlowPort xmi:id="_S7ZAQLVdEeaBS_VRvj6cKg" base_Port="_S7P2ULVdEeaBS_VRvj6cKg" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_TWSPsLVhEeaBS_VRvj6cKg" base_Port="_TWQagLVhEeaBS_VRvj6cKg" direction="in"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_Nkt8cLXfEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_c4g2oLXfEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_8O9i0LXkEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.state.xtext.UmlState"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_aDaqELXlEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
-  <ActionLanguage:TextualRepresentation xmi:id="_s_pqkLXlEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
   <Requirements:Requirement xmi:id="_2CvfwLdmEeaUEPoVbCvQxA" text="The system shall have 4 modes of operation" id="operation_1" base_Class="_2CWeMLdmEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_3upLcLdnEeaUEPoVbCvQxA" text="The system shall have an off operation mode" id="operation_1.1" base_Class="_3uO7wLdnEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_SE9X4LdoEeaUEPoVbCvQxA" text="The system shall have 3 active operation modes" id="operation_1.2" base_Class="_SEbzcLdoEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_u4vsULdoEeaUEPoVbCvQxA" text="The system shall have an Electron operation mode" id="operation_1.2.1" base_Class="_u4TncLdoEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_PFNz0LdpEeaUEPoVbCvQxA" text="The system shall have an X-ray mode" id="operation_1.2.2" base_Class="_PEhQQLdpEeaUEPoVbCvQxA"/>
-  <Requirements:DeriveReqt xmi:id="_pZCs8LdpEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_HA4CkLdsEeaUEPoVbCvQxA" text="The system shall have a Light operation mode" id="operation_1.2.3" base_Class="_HAN7QLdsEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_fbc7ELdsEeaUEPoVbCvQxA" text="The system shall respond to commands change mode of operation" id="operation_2" base_Class="_fa1QALdsEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_Z6ewYLdtEeaUEPoVbCvQxA" text="The system shall respond to commands that selects Electron Mode" id="operation_2.1" base_Class="_Z5sGMLdtEeaUEPoVbCvQxA"/>
@@ -655,4 +662,12 @@
   <Requirements:Requirement xmi:id="_AXiCgLfZEeaUEPoVbCvQxA" text="The system shall have a 'Set light mode' user interface" id="component_1.3" base_Class="_AWVvsLfZEeaUEPoVbCvQxA"/>
   <Requirements:DeriveReqt xmi:id="_jSJLQLfZEeaUEPoVbCvQxA" base_Abstraction="_jQtA0LfZEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_1_EvALfaEeaUEPoVbCvQxA" text="The system shall have an 'Off' user interface" id="component_2" base_Class="_1-FQgLfaEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_4vcLkLffEeaUEPoVbCvQxA" text="The system shall start emitting when it recieves a start signal" id="operation_3" base_Class="_4uABILffEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_ZCmJ4LfgEeaUEPoVbCvQxA" text="The system shall have a 'Start' User interface" id="component_3" base_Class="_ZBNp0LfgEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_3D0h0LfgEeaUEPoVbCvQxA" text="The system shall emit for 10seconds each time it recieves a start signal." id="operation_3.1" base_Class="_3CivcLfgEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_V70JsLfhEeaUEPoVbCvQxA" text="The system shall have a timer component to monitor emitting time" id="component_4" base_Class="_V6c3wLfhEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_aXNhgLfiEeaUEPoVbCvQxA" text="The system shall stop emitting when it recieves a stop signal" id="operation_1.1.1" base_Class="_aV_ZgLfiEeaUEPoVbCvQxA"/>
+  <Requirements:DeriveReqt xmi:id="_Yzi54LfjEeaUEPoVbCvQxA" base_Abstraction="_Yxay8LfjEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_E1SmQLfkEeaUEPoVbCvQxA" text="The system shall have an emitter component" id="component_5" base_Class="_Ez6tQLfkEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_6pVTILfkEeaUEPoVbCvQxA" text="The system shall have a turntable" id="component_6" base_Class="_6n2FYLfkEeaUEPoVbCvQxA"/>
 </xmi:XMI>
