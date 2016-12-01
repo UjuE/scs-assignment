@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows">
   <uml:Model xmi:id="__HqB0K0eEea34NqhkWsDAA" name="Therac25RootElement">
     <packagedElement xmi:type="uml:Package" xmi:id="_CO9xAK0fEea34NqhkWsDAA" name="RequirementsAnalysis">
       <packagedElement xmi:type="uml:Actor" xmi:id="_ZKkxIK0fEea34NqhkWsDAA" name="Operator"/>
@@ -30,8 +30,11 @@
           <node xmi:type="uml:OpaqueAction" xmi:id="_lNZ3kK0kEea34NqhkWsDAA" name="Click Align Turntable" incoming="_33A3AK0kEea34NqhkWsDAA" outgoing="_5gO3kK0kEea34NqhkWsDAA"/>
           <node xmi:type="uml:InitialNode" xmi:id="_6RNMEK0lEea34NqhkWsDAA" name="InitialNode1" outgoing="_Eme90K0mEea34NqhkWsDAA"/>
         </ownedBehavior>
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_mdqv0LXbEeaBS_VRvj6cKg" name="ExtensionPoint1"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_hj-sEK0fEea34NqhkWsDAA" name="Treat Cancer" subject="_g7wfgLVkEeaBS_VRvj6cKg"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_hj-sEK0fEea34NqhkWsDAA" name="Treat Cancer" subject="_g7wfgLVkEeaBS_VRvj6cKg">
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_lK0A0LXbEeaBS_VRvj6cKg" name="ExtensionPoint1"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_tbu9MK0fEea34NqhkWsDAA" name="An_Operator_Take_X-ray" memberEnd="_tbyAgK0fEea34NqhkWsDAA _tbyAga0fEea34NqhkWsDAA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tbwLUK0fEea34NqhkWsDAA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tbwyYK0fEea34NqhkWsDAA" key="nature" value="UML_Nature"/>
@@ -46,7 +49,10 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_uhqDcq0fEea34NqhkWsDAA" name="treat cancer" type="_hj-sEK0fEea34NqhkWsDAA" association="_uhpcYK0fEea34NqhkWsDAA"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_uhqqgK0fEea34NqhkWsDAA" name="operator" type="_ZKkxIK0fEea34NqhkWsDAA" association="_uhpcYK0fEea34NqhkWsDAA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_O3bQ4K0gEea34NqhkWsDAA" name="Align Turntable" subject="_g7wfgLVkEeaBS_VRvj6cKg"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_O3bQ4K0gEea34NqhkWsDAA" name="Align Turntable" subject="_g7wfgLVkEeaBS_VRvj6cKg">
+        <extend xmi:type="uml:Extend" xmi:id="_lKvIULXbEeaBS_VRvj6cKg" name="Align_to_Electron_position" extendedCase="_hj-sEK0fEea34NqhkWsDAA" extensionLocation="_lK0A0LXbEeaBS_VRvj6cKg"/>
+        <extend xmi:type="uml:Extend" xmi:id="_mdqIwLXbEeaBS_VRvj6cKg" name="Align_To_X-Ray_Position" extendedCase="_bgQPEK0fEea34NqhkWsDAA" extensionLocation="_mdqv0LXbEeaBS_VRvj6cKg"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_S1WfAK0gEea34NqhkWsDAA" name="An_Operator_Align_Turn_Table" memberEnd="_S1XtIK0gEea34NqhkWsDAA _S1XtIa0gEea34NqhkWsDAA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S1XGEK0gEea34NqhkWsDAA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S1XGEa0gEea34NqhkWsDAA" key="nature" value="UML_Nature"/>
@@ -62,7 +68,7 @@
 	2. XRayEmmitterMode
 	3. AlignmentEmitterMode</body>
       </ownedComment>
-      <packagedElement xmi:type="uml:Class" xmi:id="_i4zeEK0sEea34NqhkWsDAA" name="Therac_25_Turntable" isActive="true">
+      <packagedElement xmi:type="uml:Class" xmi:id="_i4zeEK0sEea34NqhkWsDAA" name="Therac_25_Turntable" classifierBehavior="__hfc0LXfEeamGJ3BhPN_Eg" isActive="true">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_iEah0q0uEea34NqhkWsDAA" name="counterweight_1" type="_y_1zEK0sEea34NqhkWsDAA" aggregation="composite" association="_iEZ6wK0uEea34NqhkWsDAA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_itX_Qq0uEea34NqhkWsDAA" name="microswitch actuators_1" type="_0KDjcK0sEea34NqhkWsDAA" aggregation="composite" association="_itXYMK0uEea34NqhkWsDAA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_jS_0060uEea34NqhkWsDAA" name="electron mode scan magnet_1" type="_3MVosK0sEea34NqhkWsDAA" aggregation="composite" association="_jS_00K0uEea34NqhkWsDAA"/>
@@ -76,6 +82,31 @@
         <ownedAttribute xmi:type="uml:Port" xmi:id="_-7bNYLHkEeahfuYT2kQbow" name="emitter_low_energy_beam" type="_W90VILJCEeahfuYT2kQbow" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_E0ItMLHlEeahfuYT2kQbow" name="emitter_very_low_energy_light" visibility="package" type="_cvbHYLJCEeahfuYT2kQbow" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_96nS0LHzEeahfuYT2kQbow" name="turntable microswitch assembly_1" type="_vlAq8K0sEea34NqhkWsDAA" aggregation="composite" association="_96kPgLHzEeahfuYT2kQbow"/>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="__hfc0LXfEeamGJ3BhPN_Eg" name="Turntable_State_Machine">
+          <region xmi:type="uml:Region" xmi:id="_DLBvULXgEeamGJ3BhPN_Eg" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_WCIl8LXlEeamGJ3BhPN_Eg" name="initialise_in_invalid_position" source="_GEf20LXgEeamGJ3BhPN_Eg" target="_ra2FYLXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_fF8IwLXlEeamGJ3BhPN_Eg" name="initialise_in_light_position" source="_GEf20LXgEeamGJ3BhPN_Eg" target="_y3sRcLXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_n3O_QLXlEeamGJ3BhPN_Eg" name="initialise_in_x-ray_position" source="_GEf20LXgEeamGJ3BhPN_Eg" target="_7KyJALXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_aChcwLXmEeamGJ3BhPN_Eg" name="initialise_in_electron_position" source="_GEf20LXgEeamGJ3BhPN_Eg" target="_BvBSELXlEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_o7dm8LXmEeamGJ3BhPN_Eg" name="invalid_position_move_to_electron_position" source="_ra2FYLXkEeamGJ3BhPN_Eg" target="_BvBSELXlEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_4VuVgLXmEeamGJ3BhPN_Eg" name="electron_position_move_to_invalid_position" source="_BvBSELXlEeamGJ3BhPN_Eg" target="_ra2FYLXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_QRqKMLXnEeamGJ3BhPN_Eg" name="invalid_position_move_to_x-ray_position" source="_ra2FYLXkEeamGJ3BhPN_Eg" target="_7KyJALXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_bM6W0LXnEeamGJ3BhPN_Eg" name="x-ray_position_move_to_invalid_position" source="_7KyJALXkEeamGJ3BhPN_Eg" target="_ra2FYLXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_0EX_oLXnEeamGJ3BhPN_Eg" name="invalid_position_move_to_light_position" source="_ra2FYLXkEeamGJ3BhPN_Eg" target="_y3sRcLXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_HGAdgLXoEeamGJ3BhPN_Eg" name="light_position_move_to_invalid_position" source="_y3sRcLXkEeamGJ3BhPN_Eg" target="_ra2FYLXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_cg0ZQLXoEeamGJ3BhPN_Eg" name="light_position_move_to_x-ray_position" source="_y3sRcLXkEeamGJ3BhPN_Eg" target="_7KyJALXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_tMaz4LXoEeamGJ3BhPN_Eg" name="x-ray_position_move_to_light_position" source="_7KyJALXkEeamGJ3BhPN_Eg" target="_y3sRcLXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_6GbzQLXoEeamGJ3BhPN_Eg" name="light_position_move_to_electron_position" source="_y3sRcLXkEeamGJ3BhPN_Eg" target="_BvBSELXlEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_Hm02ILXpEeamGJ3BhPN_Eg" name="electron_position_move_to_light_position" source="_BvBSELXlEeamGJ3BhPN_Eg" target="_y3sRcLXkEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_TxuFsLXpEeamGJ3BhPN_Eg" name="x-ray_position_move_to_electron_position" source="_7KyJALXkEeamGJ3BhPN_Eg" target="_BvBSELXlEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_ot3vgLXpEeamGJ3BhPN_Eg" name="electron_position_move_to_x-ray_position" source="_BvBSELXlEeamGJ3BhPN_Eg" target="_7KyJALXkEeamGJ3BhPN_Eg"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_GEf20LXgEeamGJ3BhPN_Eg" name="start_up"/>
+            <subvertex xmi:type="uml:State" xmi:id="_ra2FYLXkEeamGJ3BhPN_Eg" name="Invalid_Position"/>
+            <subvertex xmi:type="uml:State" xmi:id="_y3sRcLXkEeamGJ3BhPN_Eg" name="Light"/>
+            <subvertex xmi:type="uml:State" xmi:id="_7KyJALXkEeamGJ3BhPN_Eg" name="X-Ray"/>
+            <subvertex xmi:type="uml:State" xmi:id="_BvBSELXlEeamGJ3BhPN_Eg" name="Electron"/>
+          </region>
+        </ownedBehavior>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_OGaMULVzEeaBS_VRvj6cKg" name="operation_rotate_turntable"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_G-FFgLJDEeahfuYT2kQbow" name="rec_emitter_high_energy_beam" signal="_IxWPYLJCEeahfuYT2kQbow"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_RmeAgLJDEeahfuYT2kQbow" name="rec_emitter_low_energy_beam" signal="_W90VILJCEeahfuYT2kQbow"/>
@@ -164,23 +195,53 @@
         <ownedAttribute xmi:type="uml:Port" xmi:id="_VxLnsLHmEeahfuYT2kQbow" name="rotate_turntable" type="_hDFj4LTSEeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_Z5_oALTXEeaBS_VRvj6cKg" name="rec_rotate_turntable" signal="_hDFj4LTSEeah9bFaQnvmhQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_GpCVwK8mEeaPpeqtSkTEcQ" name="Timer" isActive="true">
+      <packagedElement xmi:type="uml:Class" xmi:id="_GpCVwK8mEeaPpeqtSkTEcQ" name="Timer" classifierBehavior="__6OX0LXdEeamGJ3BhPN_Eg" isActive="true">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_aI7c8K8mEeaPpeqtSkTEcQ" name="increment_timer_in" visibility="public" type="_VEx-0LTSEeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_BDizQK8uEeaPpeqtSkTEcQ" name="emitter_start" visibility="package" type="_fp8cILTREeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_61CNIK8uEeaPpeqtSkTEcQ" name="stop_timer" type="_Z5cnsLTSEeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_0B5GkK9IEeaPpeqtSkTEcQ" name="display_time_out" type="_lXDI4LTREeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_S7P2ULVdEeaBS_VRvj6cKg" name="emitter_stop" type="_ZYiC0LVdEeaBS_VRvj6cKg" aggregation="composite"/>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="__6OX0LXdEeamGJ3BhPN_Eg" name="Timer_State_Machine" visibility="package">
+          <region xmi:type="uml:Region" xmi:id="_CFUWYLXeEeamGJ3BhPN_Eg" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_KFuGALXfEeamGJ3BhPN_Eg" name="Initialise" source="_QB7bMLXeEeamGJ3BhPN_Eg" target="_U3mJoLXeEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_a9ab4LXfEeamGJ3BhPN_Eg" name="increment_timing" source="_U3mJoLXeEeamGJ3BhPN_Eg" target="_hTBvkLXeEeamGJ3BhPN_Eg">
+              <trigger xmi:type="uml:Trigger" xmi:id="_2ttLoLXiEeamGJ3BhPN_Eg" name="Increment_timer_start_timing" event="_y-sjQLXiEeamGJ3BhPN_Eg" port="_aI7c8K8mEeaPpeqtSkTEcQ"/>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_gVYmILXfEeamGJ3BhPN_Eg" name="time_remaining == 0 | Stop signal recieved" source="_hTBvkLXeEeamGJ3BhPN_Eg" target="_U3mJoLXeEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_kkBM8LXjEeamGJ3BhPN_Eg" name="time_remaining > 0" source="_hTBvkLXeEeamGJ3BhPN_Eg" target="_hTBvkLXeEeamGJ3BhPN_Eg"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_QB7bMLXeEeamGJ3BhPN_Eg" name="start_up"/>
+            <subvertex xmi:type="uml:State" xmi:id="_U3mJoLXeEeamGJ3BhPN_Eg" name="Off"/>
+            <subvertex xmi:type="uml:State" xmi:id="_hTBvkLXeEeamGJ3BhPN_Eg" name="Timing"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_Zv31QLXgEeamGJ3BhPN_Eg" name="Fork1" kind="fork"/>
+          </region>
+        </ownedBehavior>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_OnE1gLXYEeaBS_VRvj6cKg" name="operation_decrement_timer"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_e3aHwLTYEeaBS_VRvj6cKg" name="rec_time_increment" signal="_VEx-0LTSEeah9bFaQnvmhQ"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_nLZXMLTYEeaBS_VRvj6cKg" name="rec_time_stop" signal="_Z5cnsLTSEeah9bFaQnvmhQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_SfcpcK8uEeaPpeqtSkTEcQ" name="Emitter" isActive="true">
+      <packagedElement xmi:type="uml:Class" xmi:id="_SfcpcK8uEeaPpeqtSkTEcQ" name="Emitter" classifierBehavior="_PzADMLYyEeamGJ3BhPN_Eg" isActive="true">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_Mi1u0K8zEeaPpeqtSkTEcQ" name="emitter_stop" visibility="package" type="_ZYiC0LVdEeaBS_VRvj6cKg" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_ziThALGMEeaCK4hL_Y_D7g" name="emitter_operation_mode" type="_qDNgkLTSEeah9bFaQnvmhQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_rOyVkLHiEeahfuYT2kQbow" name="low_energy_beam" type="_W90VILJCEeahfuYT2kQbow" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_5bcokLHiEeahfuYT2kQbow" name="high_energy_beam" type="_IxWPYLJCEeahfuYT2kQbow" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_AIZowLHjEeahfuYT2kQbow" name="very_low_energy_light" visibility="public" type="_cvbHYLJCEeahfuYT2kQbow" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_TWQagLVhEeaBS_VRvj6cKg" name="emitter_start" type="_fp8cILTREeah9bFaQnvmhQ" aggregation="composite"/>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_PzADMLYyEeamGJ3BhPN_Eg" name="Emitter_State_Machine">
+          <region xmi:type="uml:Region" xmi:id="_Ue9cALYyEeamGJ3BhPN_Eg" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_3ljV0LYzEeamGJ3BhPN_Eg" name="initialize" source="_jwcCALYyEeamGJ3BhPN_Eg" target="_loJxkLYyEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_DzOMkLY0EeamGJ3BhPN_Eg" name="emitter_operation_mode == 'LIGHT' AND started" source="_loJxkLYyEeamGJ3BhPN_Eg" target="_-nCRALYyEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_cPl00LY0EeamGJ3BhPN_Eg" name="emitter_operation_mode == 'LOW' AND started" source="_loJxkLYyEeamGJ3BhPN_Eg" target="_xvjoQLYyEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_jFVkoLY0EeamGJ3BhPN_Eg" name="emitter_operation_mode == 'HIGH' AND started" source="_loJxkLYyEeamGJ3BhPN_Eg" target="_3jWy4LYyEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_-CkAELY0EeamGJ3BhPN_Eg" name="stop_emitting_light" source="_-nCRALYyEeamGJ3BhPN_Eg" target="_loJxkLYyEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_SzVgULY1EeamGJ3BhPN_Eg" name="stop_emitting_high" source="_3jWy4LYyEeamGJ3BhPN_Eg" target="_loJxkLYyEeamGJ3BhPN_Eg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_gsg2oLY1EeamGJ3BhPN_Eg" name="stop_emitting_low" source="_xvjoQLYyEeamGJ3BhPN_Eg" target="_loJxkLYyEeamGJ3BhPN_Eg"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_jwcCALYyEeamGJ3BhPN_Eg" name="start_up"/>
+            <subvertex xmi:type="uml:State" xmi:id="_loJxkLYyEeamGJ3BhPN_Eg" name="Emitter_off"/>
+            <subvertex xmi:type="uml:State" xmi:id="_xvjoQLYyEeamGJ3BhPN_Eg" name="Emitting_Low"/>
+            <subvertex xmi:type="uml:State" xmi:id="_3jWy4LYyEeamGJ3BhPN_Eg" name="Emitting_High"/>
+            <subvertex xmi:type="uml:State" xmi:id="_-nCRALYyEeamGJ3BhPN_Eg" name="Emitting_Light"/>
+          </region>
+        </ownedBehavior>
         <ownedReception xmi:type="uml:Reception" xmi:id="_tPUogLTYEeaBS_VRvj6cKg" name="rec_emitter_start" signal="_fp8cILTREeah9bFaQnvmhQ"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_6KFOwLTYEeaBS_VRvj6cKg" name="rec_emitter_operation_mode" signal="_qDNgkLTSEeah9bFaQnvmhQ"/>
         <ownedReception xmi:type="uml:Reception" xmi:id="_3c2LALVdEeaBS_VRvj6cKg" name="rec_emitter_stop" signal="_ZYiC0LVdEeaBS_VRvj6cKg"/>
@@ -343,12 +404,10 @@
       <packagedElement xmi:type="uml:Signal" xmi:id="_hDFj4LTSEeah9bFaQnvmhQ" name="sig_rotate_turntable"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_qDNgkLTSEeah9bFaQnvmhQ" name="sig_emitter_operation_mode"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_ZYiC0LVdEeaBS_VRvj6cKg" name="sig_emitter_stop"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_y-sjQLXiEeamGJ3BhPN_Eg" name="Increment_timer" signal="_VEx-0LTSEeah9bFaQnvmhQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_vvZIYLVjEeaBS_VRvj6cKg" name="Dynamics">
-      <packagedElement xmi:type="uml:Interaction" xmi:id="_g7wfgLVkEeaBS_VRvj6cKg" name="normal_operation" useCase="_hj-sEK0fEea34NqhkWsDAA _O3bQ4K0gEea34NqhkWsDAA">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_OVpcYLXaEeaBS_VRvj6cKg">
-          <body> </body>
-        </ownedComment>
+      <packagedElement xmi:type="uml:Interaction" xmi:id="_g7wfgLVkEeaBS_VRvj6cKg" name="normal_electron_mode_operation" useCase="_hj-sEK0fEea34NqhkWsDAA _O3bQ4K0gEea34NqhkWsDAA">
         <lifeline xmi:type="uml:Lifeline" xmi:id="_xJ4IYLVuEeaBS_VRvj6cKg" name="Emitter" represents="_cl4foLErEeaPpeqtSkTEcQ" coveredBy="_fplPgLVwEeaBS_VRvj6cKg _J55agLVxEeaBS_VRvj6cKg _jV3_0LXYEeaBS_VRvj6cKg"/>
         <lifeline xmi:type="uml:Lifeline" xmi:id="_8R6z0LVuEeaBS_VRvj6cKg" name="Timer" represents="_BJepsLF_EeacHfKEnsXq-Q" coveredBy="_JYhBMLVwEeaBS_VRvj6cKg _CrWJILVxEeaBS_VRvj6cKg _J54MYLVxEeaBS_VRvj6cKg _TFWdcLVxEeaBS_VRvj6cKg _OoH-YLXYEeaBS_VRvj6cKg _OoJMgLXYEeaBS_VRvj6cKg _W6oAELXYEeaBS_VRvj6cKg _W6onILXYEeaBS_VRvj6cKg _jV3YwLXYEeaBS_VRvj6cKg"/>
         <lifeline xmi:type="uml:Lifeline" xmi:id="_Gu-BgLVvEeaBS_VRvj6cKg" name="Controller" represents="_SSQA4q-wEeaPpeqtSkTEcQ" coveredBy="_JYgaILVwEeaBS_VRvj6cKg _fpkocLVwEeaBS_VRvj6cKg _r5KKwLVwEeaBS_VRvj6cKg _1f7QsLVwEeaBS_VRvj6cKg _CrViELVxEeaBS_VRvj6cKg"/>
@@ -459,6 +518,12 @@
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_neZmMLX8EduFmqQsrNB9lw"/>
     </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_NkhIILXfEeamGJ3BhPN_Eg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NkmAoLXfEeamGJ3BhPN_Eg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
   </uml:Model>
   <Blocks:Block xmi:id="_i41TQK0sEea34NqhkWsDAA" base_Class="_i4zeEK0sEea34NqhkWsDAA"/>
   <Blocks:Block xmi:id="_vlB5EK0sEea34NqhkWsDAA" base_Class="_vlAq8K0sEea34NqhkWsDAA"/>
@@ -518,4 +583,9 @@
   <Blocks:Unit xmi:id="_kjAN4LJBEeahfuYT2kQbow" base_InstanceSpecification="_kiyygLJBEeahfuYT2kQbow"/>
   <PortAndFlows:FlowPort xmi:id="_S7ZAQLVdEeaBS_VRvj6cKg" base_Port="_S7P2ULVdEeaBS_VRvj6cKg" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_TWSPsLVhEeaBS_VRvj6cKg" base_Port="_TWQagLVhEeaBS_VRvj6cKg" direction="in"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_Nkt8cLXfEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_c4g2oLXfEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_8O9i0LXkEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.state.xtext.UmlState"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_aDaqELXlEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_s_pqkLXlEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
 </xmi:XMI>
