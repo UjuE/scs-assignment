@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements">
   <uml:Model xmi:id="__HqB0K0eEea34NqhkWsDAA" name="Therac25RootElement">
     <packagedElement xmi:type="uml:Package" xmi:id="_CO9xAK0fEea34NqhkWsDAA" name="RequirementsAnalysis">
       <packagedElement xmi:type="uml:Actor" xmi:id="_ZKkxIK0fEea34NqhkWsDAA" name="Operator"/>
@@ -60,8 +60,19 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_S1XtIK0gEea34NqhkWsDAA" name="align turn table" type="_O3bQ4K0gEea34NqhkWsDAA" association="_S1WfAK0gEea34NqhkWsDAA"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_S1XtIa0gEea34NqhkWsDAA" name="operator" type="_ZKkxIK0fEea34NqhkWsDAA" association="_S1WfAK0gEea34NqhkWsDAA"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_2CWeMLdmEeaUEPoVbCvQxA" name="Operation Modes">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_3uO7wLdnEeaUEPoVbCvQxA" name="Off Operation Mode"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_SEbzcLdoEeaUEPoVbCvQxA" name="Active Operation Modes">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_u4TncLdoEeaUEPoVbCvQxA" name="Electron Operation Mode"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_PEhQQLdpEeaUEPoVbCvQxA" name="X-Ray Operation Mode"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_HAN7QLdsEeaUEPoVbCvQxA" name="Light Operation Mode"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_fa1QALdsEeaUEPoVbCvQxA" name="Configurable Operation Mode">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_Z5sGMLdtEeaUEPoVbCvQxA" name="Operate in Electron Mode"/>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_OMBF8K0sEea34NqhkWsDAA" name="DesignModel">
+    <packagedElement xmi:type="uml:Package" xmi:id="_OMBF8K0sEea34NqhkWsDAA" name="Design_Model">
       <ownedComment xmi:type="uml:Comment" xmi:id="_ErQnALGCEeacHfKEnsXq-Q" annotatedElement="_WqQ_sLGBEeacHfKEnsXq-Q">
         <body>emitterMode value is either one of the following values:
 	1. ElectronEmitterMode
@@ -392,7 +403,9 @@
       </packagedElement>
       <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_kiyygLJBEeahfuYT2kQbow" name="Unit1"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_ryiWsLJBEeahfuYT2kQbow" name="sig_turntable_position_query"/>
-      <packagedElement xmi:type="uml:Signal" xmi:id="_BpO9MLJCEeahfuYT2kQbow" name="sig_turntable_position_result"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_BpO9MLJCEeahfuYT2kQbow" name="sig_turntable_position_result">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-miF8LeLEeaUEPoVbCvQxA" name="turntablePosition" type="_AdEmQLeLEeaUEPoVbCvQxA"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Signal" xmi:id="_IxWPYLJCEeahfuYT2kQbow" name="sig_emitter_high_energy"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_W90VILJCEeahfuYT2kQbow" name="sig_emitter_low_energy"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_cvbHYLJCEeahfuYT2kQbow" name="sig_emitter_very_low_light"/>
@@ -402,9 +415,29 @@
       <packagedElement xmi:type="uml:Signal" xmi:id="_VEx-0LTSEeah9bFaQnvmhQ" name="sig_increment_timer"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_Z5cnsLTSEeah9bFaQnvmhQ" name="sig_stop_system"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_hDFj4LTSEeah9bFaQnvmhQ" name="sig_rotate_turntable"/>
-      <packagedElement xmi:type="uml:Signal" xmi:id="_qDNgkLTSEeah9bFaQnvmhQ" name="sig_emitter_operation_mode"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_qDNgkLTSEeah9bFaQnvmhQ" name="sig_emitter_operation_mode">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8c7AALeJEeaUEPoVbCvQxA" name="emiterMode" type="_84bFsLeIEeaUEPoVbCvQxA">
+          <defaultValue xmi:type="uml:StringExpression" xmi:id="_8c7AAbeJEeaUEPoVbCvQxA" name="Off" type="_84bFsLeIEeaUEPoVbCvQxA" symbol="Off"/>
+        </ownedAttribute>
+      </packagedElement>
       <packagedElement xmi:type="uml:Signal" xmi:id="_ZYiC0LVdEeaBS_VRvj6cKg" name="sig_emitter_stop"/>
       <packagedElement xmi:type="uml:SignalEvent" xmi:id="_y-sjQLXiEeamGJ3BhPN_Eg" name="Increment_timer" signal="_VEx-0LTSEeah9bFaQnvmhQ"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_84bFsLeIEeaUEPoVbCvQxA" name="EmitterModes">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KQ7X4LeJEeaUEPoVbCvQxA" name="Off">
+          <specification xmi:type="uml:StringExpression" xmi:id="_KQ7X4beJEeaUEPoVbCvQxA" name="Off" symbol="">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+          </specification>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PEWDkLeJEeaUEPoVbCvQxA" name="Low"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_UQos0LeKEeaUEPoVbCvQxA" name="High"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YTBkMLeKEeaUEPoVbCvQxA" name="Light"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_AdEmQLeLEeaUEPoVbCvQxA" name="TurntablePositions">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_GAJNQLeLEeaUEPoVbCvQxA" name="Invalid position"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_t4JdELeLEeaUEPoVbCvQxA" name="Light"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_v890gLeLEeaUEPoVbCvQxA" name="X-Ray"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_xcVVgLeLEeaUEPoVbCvQxA" name="Electron"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_vvZIYLVjEeaBS_VRvj6cKg" name="Dynamics">
       <packagedElement xmi:type="uml:Interaction" xmi:id="_g7wfgLVkEeaBS_VRvj6cKg" name="normal_electron_mode_operation" useCase="_hj-sEK0fEea34NqhkWsDAA _O3bQ4K0gEea34NqhkWsDAA">
@@ -588,4 +621,13 @@
   <ActionLanguage:TextualRepresentation xmi:id="_8O9i0LXkEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.state.xtext.UmlState"/>
   <ActionLanguage:TextualRepresentation xmi:id="_aDaqELXlEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
   <ActionLanguage:TextualRepresentation xmi:id="_s_pqkLXlEeamGJ3BhPN_Eg" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
+  <Requirements:Requirement xmi:id="_2CvfwLdmEeaUEPoVbCvQxA" text="The system shall have 4 modes of operation" id="operation_1" base_Class="_2CWeMLdmEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_3upLcLdnEeaUEPoVbCvQxA" text="The system shall have an off operation mode" id="operation_1.1" base_Class="_3uO7wLdnEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_SE9X4LdoEeaUEPoVbCvQxA" text="The system shall have 3 active operation modes" id="operation_1.2" base_Class="_SEbzcLdoEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_u4vsULdoEeaUEPoVbCvQxA" text="The system shall have an Electron operation mode" id="operation_1.2.1" base_Class="_u4TncLdoEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_PFNz0LdpEeaUEPoVbCvQxA" text="The system shall have an X-ray mode" id="operation_1.2.2" base_Class="_PEhQQLdpEeaUEPoVbCvQxA"/>
+  <Requirements:DeriveReqt xmi:id="_pZCs8LdpEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_HA4CkLdsEeaUEPoVbCvQxA" text="The system shall have a Light operation mode" id="operation_1.2.3" base_Class="_HAN7QLdsEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_fbc7ELdsEeaUEPoVbCvQxA" text="The system shall respond to commands change mode of operation" id="operation_2" base_Class="_fa1QALdsEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_Z6ewYLdtEeaUEPoVbCvQxA" text="The system shall respond to commands that selects Electron Mode" id="operation_2.1" base_Class="_Z5sGMLdtEeaUEPoVbCvQxA"/>
 </xmi:XMI>
