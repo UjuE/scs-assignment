@@ -100,6 +100,20 @@
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_Yxay8LfjEeaUEPoVbCvQxA" name="" client="_V6c3wLfhEeaUEPoVbCvQxA" supplier="_3CivcLfgEeaUEPoVbCvQxA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_6n2FYLfkEeaUEPoVbCvQxA" name="Turntable component"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_M5VfwLflEeaUEPoVbCvQxA" client="_2CWeMLdmEeaUEPoVbCvQxA" supplier="_6n2FYLfkEeaUEPoVbCvQxA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_iIb9ILgZEeazZ5gG1iwisg" name="Emitter Operation modes">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_Lg95oLgcEeazZ5gG1iwisg" name="Emitter Electron Mode"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_mroesLgdEeazZ5gG1iwisg" name="Emitter X-Ray Mode">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_f29bALgfEeazZ5gG1iwisg" name="Emitter high energy beam"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_iQaJMLggEeazZ5gG1iwisg" name="Convert Electron to X-Rays"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_-txCALgdEeazZ5gG1iwisg" name="Emitter Light mode">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_nGD0ELghEeazZ5gG1iwisg" name="Emitter Light beam"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_lJPmQLgaEeazZ5gG1iwisg" client="_CO9xAK0fEea34NqhkWsDAA" supplier="_CO9xAK0fEea34NqhkWsDAA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ixxbwLgeEeazZ5gG1iwisg" name="Emitter low energy beam"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_w5Zg8LgiEeazZ5gG1iwisg" name="Counterweight"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_C-Q0kLgjEeazZ5gG1iwisg" name="Microswitch Actuators"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_OMBF8K0sEea34NqhkWsDAA" name="Design_Model">
       <ownedComment xmi:type="uml:Comment" xmi:id="_ErQnALGCEeacHfKEnsXq-Q" annotatedElement="_WqQ_sLGBEeacHfKEnsXq-Q">
@@ -668,6 +682,16 @@
   <Requirements:Requirement xmi:id="_V70JsLfhEeaUEPoVbCvQxA" text="The system shall have a timer component to monitor emitting time" id="component_4" base_Class="_V6c3wLfhEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_aXNhgLfiEeaUEPoVbCvQxA" text="The system shall stop emitting when it recieves a stop signal" id="operation_1.1.1" base_Class="_aV_ZgLfiEeaUEPoVbCvQxA"/>
   <Requirements:DeriveReqt xmi:id="_Yzi54LfjEeaUEPoVbCvQxA" base_Abstraction="_Yxay8LfjEeaUEPoVbCvQxA"/>
-  <Requirements:Requirement xmi:id="_E1SmQLfkEeaUEPoVbCvQxA" text="The system shall have an emitter component" id="component_5" base_Class="_Ez6tQLfkEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_E1SmQLfkEeaUEPoVbCvQxA" text="The system shall have an emitter component capable of producing light and energy beam" id="component_5" base_Class="_Ez6tQLfkEeaUEPoVbCvQxA"/>
   <Requirements:Requirement xmi:id="_6pVTILfkEeaUEPoVbCvQxA" text="The system shall have a turntable" id="component_6" base_Class="_6n2FYLfkEeaUEPoVbCvQxA"/>
+  <Requirements:Requirement xmi:id="_iJRDkLgZEeazZ5gG1iwisg" text="The system shall operate in 3 modes" id="emitter_1" base_Class="_iIb9ILgZEeazZ5gG1iwisg"/>
+  <Requirements:Requirement xmi:id="_LhhTQLgcEeazZ5gG1iwisg" text="The emitter shall operate in Electron mode when it receives a 'Low' signal" id="emitter_1.1" base_Class="_Lg95oLgcEeazZ5gG1iwisg"/>
+  <Requirements:Requirement xmi:id="_msLRQLgdEeazZ5gG1iwisg" text="The emitter shall operate in X-Ray mode when it recieves a 'High' signal" id="emitter_1.2" base_Class="_mroesLgdEeazZ5gG1iwisg"/>
+  <Requirements:Requirement xmi:id="_-uVCsLgdEeazZ5gG1iwisg" text="The emitter shall operate in Light mode when it recieves 'Light' signal" id="emitter_1.3" base_Class="_-txCALgdEeazZ5gG1iwisg"/>
+  <Requirements:Requirement xmi:id="_iyiQwLgeEeazZ5gG1iwisg" text="The emitter shall emit 5MeV when it is running in electron mode" id="emitter_1.1.1" base_Class="_ixxbwLgeEeazZ5gG1iwisg"/>
+  <Requirements:Requirement xmi:id="_f3tB4LgfEeazZ5gG1iwisg" text="The emitter shall emit 25MeV when it is running in X-Ray mode" id="emitter_1.2.1" base_Class="_f29bALgfEeazZ5gG1iwisg"/>
+  <Requirements:Requirement xmi:id="_iRGFsLggEeazZ5gG1iwisg" text="The emitter shall pass the beam through an X-Ray mode target when it is running in X-Ray mode" id="emitter_1.2.2" base_Class="_iQaJMLggEeazZ5gG1iwisg"/>
+  <Requirements:Requirement xmi:id="_nG0CALghEeazZ5gG1iwisg" text="The emitter shall emit 30W Light when it is running in Light mode" id="emitter_1.3.1" base_Class="_nGD0ELghEeazZ5gG1iwisg"/>
+  <Requirements:Requirement xmi:id="_w50-wLgiEeazZ5gG1iwisg" text="The turntable shall have a counterweight" id="component_6.1" base_Class="_w5Zg8LgiEeazZ5gG1iwisg"/>
+  <Requirements:Requirement xmi:id="_C-uuoLgjEeazZ5gG1iwisg" text="The turntable shall have Microswitch actuators" id="component_6.2" base_Class="_C-Q0kLgjEeazZ5gG1iwisg"/>
 </xmi:XMI>
